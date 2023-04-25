@@ -1,10 +1,10 @@
 services:
   web:
     build:
-      context: angular
+      context: portfolio
       target: builder
     ports:
       - 80:80
     volumes:
-      - ./angular:/project
+      - ./portfolio:/project
       - /project/node_modules

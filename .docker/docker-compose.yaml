@@ -1,11 +1,11 @@
 services:
   web:
     build:
-      context: angular
+      context: portfolio
       target: dev-envs
     ports:
       - 80:80
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./angular:/project
+      - ./portfolio:/project
       - /project/node_modules
