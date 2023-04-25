@@ -1,0 +1,27 @@
+.filter-pink {
+    width: 150%;
+    height: 50%;
+    filter: invert(83%) sepia(24%) saturate(1448%) hue-rotate(274deg) brightness(99%) contrast(91%);
+}
+
+
+
+.transform-0 {
+    transform: translateX(-1000px);
+}
+.transform-1 {
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+}
+.transform-2 {
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+}
+.transform-3 {
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+}
+.transform-4 {
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+}
