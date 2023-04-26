@@ -1,4 +1,17 @@
-.cat_circle {
+.sub-header{
+    font-family: 'termina-demi', "arial", sans-serif;
+    background-color: #CEFF1A;
+    height: 40px;
+    text-align: center;
+    position: relative;
+    bottom: 20px;
+    border-radius: 30px;
+    border: 1px solid;
+    box-shadow: 3px 3px;
+    padding: 7px 0;
+}
+
+.icon {
     position: relative;
     left: 15px;
     bottom: 30px;
@@ -6,11 +19,10 @@
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    background-color: #FE9431;
     box-shadow: 3px 3px
 }
 
-.cat_circle img {
+.icon img {
     width: 100%;
     height: auto;
 }
@@ -24,4 +36,8 @@
 
 .purple {
     background-color: #9F87F4;
+}
+
+.bold {
+    font-family: 'termina-demi', "arial", sans-serif;
 }

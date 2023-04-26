@@ -2,3 +2,15 @@
     font-family: termina;
     src: url("./TerminaTest-Regular.otf") format("opentype");
 }
+@font-face {
+    font-family: termina-bold;
+    src: url("./TerminaTest-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: termina-light;
+    src: url("./TerminaTest-Light.otf") format("opentype");
+}
+@font-face {
+    font-family: termina-demi;
+    src: url("./TerminaTest-Demi.otf") format("opentype");
+}

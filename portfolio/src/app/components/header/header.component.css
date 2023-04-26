@@ -1,3 +1,17 @@
+.header{
+    text-align: center;
+    font-family: 'termina-bold', "arial", sans-serif;
+    font-size: 40pt;
+    color: #49DBC8;
+    text-shadow: -1px 0 black, 3px 3px black, 1px 0 black, 0 -1px black;
+}
+
+.sub-header{
+    text-align: center;
+    font-family: 'termina-light', "arial", sans-serif;
+    font-size: 9pt;
+}
+
 .filter-pink {
     width: 150%;
     height: 50%;
