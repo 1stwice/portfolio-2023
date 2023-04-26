@@ -1,0 +1,27 @@
+<div class="container-fluid purple">
+    <div class="container">
+        <div class="row">
+            <div class="col-5"></div>
+            <div class="col-2 sub-header">ProjectsComponent</div>
+            <div class="col-5"></div>
+        </div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="row">
+                    <div *ngFor="let cardInfo of cardsInfo" class="col-6 py-5">
+                        <mat-card class="smooth">
+                            <span class="icon" [ngStyle]="{'background-color': cardInfo.background}">
+                                <img src="{{cardInfo.img}}">
+                            </span>
+                            <mat-card-header class="py-3 bold">{{cardInfo.header}}</mat-card-header>
+                            <mat-card-content>{{cardInfo.body}}</mat-card-content>
+                        </mat-card>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+</div>
