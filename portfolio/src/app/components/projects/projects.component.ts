@@ -31,7 +31,7 @@ export class ProjectsComponent {
         background: 'black',
         header: 'Video Project',
         body: 'Enjoy my first solo video project: Hiraeth, and the details behind production.',
-        link: '/hiraeth',
+        link: 'https://hiraeth2022.netlify.app/',
       },
       {
         img: '/',
