@@ -5,11 +5,7 @@ FROM --platform=$BUILDPLATFORM node:18.16.0-bullseye-slim as builder
 RUN mkdir /project
 WORKDIR /project
 
-RUN npm install -g @angular/cli
 RUN npm install -g http-server
-
-COPY package.json package-lock.json ./
-RUN npm ci
 
 COPY . .
 #CMD ["ng", "serve", "--host", "0.0.0.0", "--port", "80", "--disable-host-check"]

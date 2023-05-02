@@ -16,6 +16,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { MovieReviewsComponent } from './components/movie-reviews/movie-reviews.component';
+import { WebGameComponent } from './components/web-game/web-game.component';
+import { ContactMeComponent } from './components/contact-me/contact-me.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { ProjectsComponent } from './components/projects/projects.component';
     HeaderComponent,
     FooterComponent,
     ResumeComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    MovieReviewsComponent,
+    WebGameComponent,
+    ContactMeComponent
   ],
   imports: [
     BrowserModule,

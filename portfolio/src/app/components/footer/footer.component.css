@@ -2,3 +2,32 @@
     background-color: black;
     color: #CEFF1A;
 }
+
+.inline img{
+    float: left;
+    height: 60px;
+    filter: invert(85%) sepia(83%) saturate(489%) hue-rotate(15deg) brightness(101%) contrast(108%);
+}
+
+.inline{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.inline p {
+    position: relative;
+    top: 25%;
+}
+
+.inline a:link {
+    color: #CEFF1A;
+    text-decoration: none;
+}
+.inline a:hover {
+    color: #CEFF1A;
+    text-decoration: underline;
+}
+.inline a:visited {
+    color: #CEFF1A;
+}

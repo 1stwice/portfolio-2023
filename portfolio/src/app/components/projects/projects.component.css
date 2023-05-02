@@ -14,12 +14,12 @@
 .icon {
     position: relative;
     left: 15px;
-    bottom: 30px;
+    bottom: 31px;
     border: 1px solid;
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    box-shadow: 3px 3px
+    box-shadow: 3px 3px;
 }
 
 .icon img {
