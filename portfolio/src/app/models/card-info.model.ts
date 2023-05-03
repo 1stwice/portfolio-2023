@@ -3,5 +3,5 @@ export class CardInfo {
     background?: string;
     header?: string;
     body?: string;
-    link!: string;
+    link?: string;
 }

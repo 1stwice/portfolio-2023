@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-resume',
   templateUrl: './resume.component.html',
   styleUrls: ['./resume.component.css']
 })
-export class ResumeComponent {
+export class ResumeComponent implements OnInit{
+  ngOnInit(): void {
+    console.log(this.resume[6].split('\t')[1])
+  }
   resume:string[] = [
     "Zackary Tyler",
     "Location: Roseville, CA | LinkedIn: www.linkedin.com/in/zackary-tyler",

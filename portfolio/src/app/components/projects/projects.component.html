@@ -1,7 +1,7 @@
 <div class="container-fluid purple">
         <div class="row">
             <div class="col-5"></div>
-            <a href="/#projects" class="col-2 sub-header">
+            <a href="/#projects" class="col-2 sub-header card">
                 <div id="projects">Projects</div>
             </a>
             <div class="col-5"></div>
@@ -10,13 +10,13 @@
             <div class="col-2"></div>
             <div class="col-8">
                 <div class="row">
-                    <div *ngFor="let cardInfo of cardsInfo" class="col-6 py-5">
+                    <div *ngFor="let cardInfo of cardsInfo" class="col-6 py-5 px-5">
                         <a [href]="cardInfo.link">
-                            <mat-card class="smooth">
+                            <mat-card class="smooth card">
                                 <span class="icon" [ngStyle]="{'background-color': cardInfo.background}">
                                     <img src="{{cardInfo.img}}">
                                 </span>
-                                <mat-card-header class="py-3 bold">{{cardInfo.header}}</mat-card-header>
+                                <mat-card-header class="pb-3 bold">{{cardInfo.header}}</mat-card-header>
                                 <mat-card-content>{{cardInfo.body}}</mat-card-content>
                             </mat-card>
                         </a>

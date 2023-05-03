@@ -1,5 +1,14 @@
 <div class="container">
-    <div *ngFor="let line of resume" class="row">
-            <p class="col">{{line}}</p><br/>
+    <div *ngFor="let line of resume" >
+        <div *ngIf="line.includes('\t'); else regular" class="row">
+            <p class="col">{{line.split('\t')[0]}}</p>
+            <p class="col">{{line.split('\t')[1]}}</p>
+            <br/>
+        </div>
+        <ng-template #regular>
+            <div class="row">
+                <p class="col">{{line}}</p><br/>
+            </div>
+        </ng-template>
     </div>
 </div>

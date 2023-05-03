@@ -19,6 +19,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { MovieReviewsComponent } from './components/movie-reviews/movie-reviews.component';
 import { WebGameComponent } from './components/web-game/web-game.component';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ContactMeComponent } from './components/contact-me/contact-me.component
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
 
     MatCardModule,
     MatButtonModule,

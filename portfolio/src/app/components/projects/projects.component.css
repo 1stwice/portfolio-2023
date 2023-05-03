@@ -1,3 +1,16 @@
+.card {
+    transition: all .5s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05) translate(-2.5%);
+    box-shadow: 25px 25px;
+}
+.card:hover .icon{
+    transform: scale(1.25) translate(-2.5%);
+    box-shadow: 10px 10px;
+}
+
 .sub-header{
     font-family: 'termina-demi', "arial", sans-serif;
     background-color: #CEFF1A;
@@ -12,14 +25,16 @@
 }
 
 .icon {
+    transition: all .5s ease-in-out;
     position: relative;
     left: 15px;
-    bottom: 31px;
+    bottom: 36px;
     border: 1px solid;
     border-radius: 50%;
     width: 60px;
     height: 60px;
     box-shadow: 3px 3px;
+    overflow: hidden;
 }
 
 .icon img {
@@ -31,7 +46,7 @@
     border-width: 1px;
     border-color: black;
     border-radius: 15px;
-    box-shadow: 5px 5px
+    box-shadow: 5px 5px;
 }
 
 .purple {
