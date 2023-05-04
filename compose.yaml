@@ -6,7 +6,7 @@ services:
     image: nginx:latest
     volumes:
       - ./portfolio/dist/portfolio:/usr/share/nginx/html
-      #- ./portfolio/nginx.conf:/etc/nginx/nginx.conf
+      - ./portfolio/default.conf:/etc/nginx/conf.d/default.conf
       #- type: bind
       #  source: ./portfolio/nginx.conf
       #  target: /etc/nginx/nginx.conf
