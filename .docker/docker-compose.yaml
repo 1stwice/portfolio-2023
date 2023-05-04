@@ -1,11 +1,21 @@
 services:
-  web:
-    build:
-      context: portfolio
-      target: dev-envs
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./src:/usr/share/nginx/html
+      #- type: bind
+      #  source: ./portfolio/nginx.conf
+      #  target: /etc/nginx/nginx.conf
     ports:
       - 80:80
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ./portfolio:/project
-      - /project/node_modules
+
+  #web:
+  #  build:
+  #    context: portfolio
+  #    target: dev-envs
+  #  ports:
+  #    - 8080:8080
+  #  volumes:
+  #    - /var/run/docker.sock:/var/run/docker.sock
+  #    - ./portfolio:/project
+  #    - /project/node_modules

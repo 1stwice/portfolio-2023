@@ -1,10 +1,24 @@
 services:
-  web:
+  nginx:
     build:
       context: portfolio
-      target: builder
+      target: ngi
+    image: nginx:latest
+    volumes:
+      - ./portfolio/dist/portfolio:/usr/share/nginx/html
+      #- ./portfolio/nginx.conf:/etc/nginx/nginx.conf
+      #- type: bind
+      #  source: ./portfolio/nginx.conf
+      #  target: /etc/nginx/nginx.conf
     ports:
       - 80:80
-    volumes:
-      - ./portfolio:/project
-      - /project/node_modules
+
+  #web:
+  #  build:
+  #    context: portfolio
+  #    target: builder
+  #  ports:
+  #    - 8080:8080
+  #  volumes:
+  #    - ./portfolio:/project
+  #    - /project/node_modules
