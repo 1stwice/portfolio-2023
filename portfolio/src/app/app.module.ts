@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -19,7 +21,6 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { MovieReviewsComponent } from './components/movie-reviews/movie-reviews.component';
 import { WebGameComponent } from './components/web-game/web-game.component';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
-import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { HttpClientModule} from '@angular/common/http';
 
     MatCardModule,
     MatButtonModule,
+    MatExpansionModule,
 
     NgbModule,
   ],

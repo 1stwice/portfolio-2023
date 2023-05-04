@@ -1,2 +1,28 @@
-<p>movie-reviews works!</p>
-<img [src]="'https://image.tmdb.org/t/p/w220_and_h330_face' + movie.poster_path">
+<div *ngFor="let movie of topRatedMovies; let i = index">
+    <mat-expansion-panel hideToggle (click)="getMovieDetails(movie.id)" [expanded]="step === i && isLoaded" (opened)="setStep(i)">
+        <mat-expansion-panel-header class="container-fluid">
+            <div class="row">
+                <div class="col-auto">
+                    <img [src]="movieImagePath + movie.poster_path">
+    
+                </div>
+                <div class="col">
+                    <p>{{movie.title}}</p>
+                    <p>{{movie.release_date}}</p>
+                    <p>{{movie.vote_average}}</p>
+                    <p>{{movie.vote_count}}</p>
+                    <p>{{movie.overview}}</p>
+                </div>
+            </div>
+            
+        </mat-expansion-panel-header>
+        <p>{{movieDetails.tagline}}</p>
+    </mat-expansion-panel>
+</div>
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" (click)="changePage(-1)">Previous</a></li>
+      <li class="page-item"><a class="page-link" (click)="changePage(1)">Next</a></li>
+    </ul>
+</nav>
+{{pageNumber}} of {{totalPages}}

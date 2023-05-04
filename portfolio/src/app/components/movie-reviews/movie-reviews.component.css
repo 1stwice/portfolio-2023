@@ -1,0 +1,9 @@
+.mat-expansion-panel-header {
+    height: auto;
+}
+
+.mat-expansion-panel {
+    border-radius: 0;
+    background-color: rgb(24, 24, 24);
+    color: white;
+}
