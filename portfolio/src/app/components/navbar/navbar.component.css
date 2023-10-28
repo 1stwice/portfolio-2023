@@ -1,0 +1,30 @@
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    width: 100px;
+}
+
+.log-in:hover {
+    text-decoration: underline;
+}
+
+.sign-up{
+    background-color: #CEFF1A;
+    text-align: center;
+    bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid;
+    box-shadow: 3px 3px;
+    padding: 7px 0;
+    transition: all .1s ease-in-out;
+    color: inherit;
+    text-decoration: none;
+}
+
+.sign-up:hover{
+    transform: scale(1.01) translate(-.5%);
+    box-shadow: 7px 7px;
+}

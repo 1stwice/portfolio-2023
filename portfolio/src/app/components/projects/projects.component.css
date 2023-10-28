@@ -1,14 +1,67 @@
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.add{
+    font-family: 'termina-demi', "arial", sans-serif;
+    background-color: #CEFF1A;
+    height: 40px;
+    text-align: center;
+    border-radius: 30px;
+    border: 1px solid;
+    box-shadow: 3px 3px;
+    padding: 7px 10px;
+    transition: all .1s ease-in-out;
+}
+
+.add:hover{
+    transform: scale(1.01) translate(-.5%);
+    box-shadow: 7px 7px;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin: 4px 20px;
+  }
+
 .card {
+    width: 100%;
     transition: all .5s ease-in-out;
+    float: left;
 }
 
 .card:hover {
     transform: scale(1.05) translate(-2.5%);
     box-shadow: 25px 25px;
 }
-.card:hover .icon{
+.card:hover .icon {
     transform: scale(1.25) translate(-2.5%);
     box-shadow: 10px 10px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.edit {
+    position: relative;
+    top: 46px;
+    right: 4px;
+    z-index: 1;
+}
+
+.edit:hover {
+    cursor: pointer;
+    filter: invert(44%) sepia(69%) saturate(3340%) hue-rotate(166deg) brightness(101%) contrast(101%);
+}
+
+.text {
+    width: 100%;
 }
 
 .sub-header{
@@ -22,6 +75,13 @@
     border: 1px solid;
     box-shadow: 3px 3px;
     padding: 7px 0;
+    transition: all .1s ease-in-out;
+}
+
+.sub-header:hover{
+    text-decoration: underline;
+    transform: scale(1.01) translate(-.5%);
+    box-shadow: 7px 7px;
 }
 
 .icon {
@@ -55,11 +115,6 @@
 
 .bold {
     font-family: 'termina-demi', "arial", sans-serif;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
 }
 
 .mat-mdc-card-header {

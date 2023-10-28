@@ -1,29 +1,57 @@
 <div class="container-fluid purple">
-        <div class="row">
-            <div class="col-5"></div>
-            <a href="/#projects" class="col-sm-2 sub-header card">
-                <div id="projects">Projects</div>
-            </a>
-            <div class="col-5"></div>
-        </div>
-        <div class="row">
-            <div class="col-2"></div>
-            <div class="col-sm-8">
-                <div class="row">
-                    <div *ngFor="let cardInfo of cardsInfo" class="col-sm-6 py-5 px-5">
-                        <a [href]="cardInfo.link">
-                            <mat-card class="smooth card">
-                                <span class="icon" [ngStyle]="{'background-color': cardInfo.background}">
-                                    <img src="{{cardInfo.img}}">
-                                </span>
+    <div class="row">
+        <div class="col-5"></div>
+        <a href="/#projects" class="col-sm-2 sub-header">
+            <div id="projects">
+                <i class="arrow down col"></i>
+                Projects
+                <i class="arrow down"></i>
+            </div>
+        </a>
+        <div class="col-5"></div>
+    </div>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-sm-8">
+            <div class="row">
+                <div *ngFor="let cardInfo of cardsInfo; let i = index" class="col-sm-6 py-5 px-5">
+                    <span *ngIf="isEditor && !inEditMode; else editIcon" class="edit float-end" (click)="edit(i)">
+                        <img src="assets/images/edit.svg" />
+                    </span>
+                    <ng-template #editIcon>
+                        <span *ngIf="isEditor" class="edit float-end" (click)="edit(i)">
+                            <img src="assets/images/check.svg" />
+                        </span>
+                    </ng-template>
+                    <a [href]="cardInfo.link">
+                        <mat-card class="smooth card">
+                            <span class="icon" [ngStyle]="{'background-color': cardInfo.background}">
+                                <img src="{{cardInfo.img}}">
+                            </span>
+                            <div *ngIf="!inEditMode; else editContent">
                                 <mat-card-header class="pb-3 bold">{{cardInfo.header}}</mat-card-header>
                                 <mat-card-content>{{cardInfo.body}}</mat-card-content>
-                            </mat-card>
-                        </a>
-                    </div>
-
+                            </div>
+                            <ng-template #editContent>
+                                <form #project = "ngForm" (ngSubmit) = "updateProject(project.value)">
+                                    <mat-card-header>
+                                        <input class="mb-3 text" placeholder="Title" value="{{cardInfo.header}}">
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                        <textarea class="text" placeholder="Body" value="{{cardInfo.body}}"></textarea>
+                                    </mat-card-content>
+                                </form>
+                            </ng-template>
+                        </mat-card>
+                    </a>
+                </div>
+                <div *ngIf="isEditor" class="col-sm-6 align-items-center d-flex justify-content-center py-5 px-5">
+                    <button class="add">
+                        Add New Card
+                    </button>
                 </div>
             </div>
-            <div class="col-2"></div>
         </div>
+        <div class="col-2"></div>
+    </div>
 </div>

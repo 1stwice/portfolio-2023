@@ -9,6 +9,8 @@ import { CardInfo } from 'src/app/models/card-info.model';
 export class ProjectsComponent {
   
   cardsInfo!: CardInfo[];
+  isEditor = true;
+  inEditMode = false;
 
   ngOnInit(): void {
     this.cardsInfo = [
@@ -16,7 +18,7 @@ export class ProjectsComponent {
         img: '/assets/images/tickets.svg',
         background: '#F290E7',
         header: 'Movie Review App',
-        body: 'An example application using one of the movie industries most popular API\'s: TMDB.',
+        body: 'An example application using a film industry favorite API: TMDB.',
         link: '/movie-reviews',
       },
       {
@@ -25,6 +27,13 @@ export class ProjectsComponent {
         header: 'Movie Trivia',
         body: 'Enjoy a trivia game to demonstrate abstracting components, as well as dynamic ad deployment.',
         link: '/movie-trivia',
+      },
+      {
+        img: '/assets/images/music-note-slider.svg',
+        background: 'transparent',
+        header: 'Music Genre Dictionary',
+        body: 'Help define music genres, new and old',
+        link: '/genre-dictionary',
       },
       {
         img: '/assets/images/angular.svg',
@@ -37,16 +46,25 @@ export class ProjectsComponent {
         img: '/assets/images/head.png',
         background: 'black',
         header: 'Video Project',
-        body: 'Enjoy my first solo video project: Hiraeth, and the details behind production.',
+        body: 'Enjoy my first solo video project: Hiraeth. Created using Blender, Davinci Resolve, and Mocap Fusion.',
         link: 'https://hiraeth2022.netlify.app/',
       },
       {
         img: '/assets/images/resume.svg',
         background: '#FE9431',
         header: 'Resume',
-        body: 'View my experience in Angular, React, Node, SpringBoot, MySQL, and many more.',
+        body: 'View my experience in Angular, Node, SpringBoot, MySQL, and many more.',
         link: '/resume',
       },
     ]
+  }
+
+  edit(i: number) {
+    this.cardsInfo[i].body = this.cardsInfo[i].body + "\n yay!"
+    this.inEditMode = !this.inEditMode
+  }
+
+  updateProject(data: any) {
+    console.log(data)
   }
 }
